@@ -31,7 +31,7 @@ module Api
       end
 
       def handle_stopligth_errors(exception)
-        render json: Jsend.error(message: 'renapo service is unavailable error message due to circuit-breaker',
+        render json: Jsend.error(message: 'service is unavailable open circuit-breaker',
                                  code: 'circuit_breaker_error'), status: :service_unavailable
       end
     end
